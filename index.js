@@ -30,7 +30,7 @@ app.delete('/api/foods/:id', api.deleteFlight);
 app.get('/api/restaurants', api.getAirports);
 app.get('/api/restaurants/:id', api.getAirport);
 
-var server = app.listen(3000, function () {
+var server = app.listen(80, function () {
 
   var host = server.address().address;
   var port = server.address().port;
