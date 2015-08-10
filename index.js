@@ -1,6 +1,7 @@
 /**
  * Module dependencies.
  */
+var http = require('http');
 var express = require('express'),
   api = require('./api');
   
@@ -30,13 +31,26 @@ app.delete('/api/foods/:id', api.deleteFlight);
 app.get('/api/restaurants', api.getAirports);
 app.get('/api/restaurants/:id', api.getAirport);
 
-var server = app.listen(80, function () {
+var server = http.createServer(function(req, res){
+  res.writeHead(200, {
+    'Content-Type': 'text/html'
+  });
+  res.end('<h1> Hello World</h1>')
+});
+
+var port = Number(process.env.PORT || 3000);
+server.listen(port);
+
+var host = server.address().address;
+
+
+/*var server = app.listen(8080, function () {
 
   var host = server.address().address;
   var port = server.address().port;
 
   console.log('FooSquare listening at http://%s:%s', host, port);
 
-});
+});*/
 
 exports.express;
