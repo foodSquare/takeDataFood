@@ -30,8 +30,8 @@ var getData = function (options, reqServer, resServer) {
 /*
  * Serve JSON to our AngularJS client
  */
-exports.getAirports = function (req, res) {
-	connectDB();
+exports.getRestaurants = function (req, res) {
+	/*connectDB();
 	connection.query('SELECT * from FOODS', function(err, rows, fields) {
 		connection.end();
 		if (!err) {
@@ -41,10 +41,10 @@ exports.getAirports = function (req, res) {
 		   console.log('Error while performing Query.');
 		  
 		}
-	});
+	});*/
 };
-exports.getAirport = function (req, res) {
-	connectDB();
+exports.getRestaurant = function (req, res) {
+	/*connectDB();
 	var identifier = req.params.id;
 	connection.query('SELECT * from FOODS where ID='+identifier, function(err, rows, fields) {
 		connection.end();
@@ -54,25 +54,27 @@ exports.getAirport = function (req, res) {
 		} else {
 		   console.log('Error while performing Query.');  
 		}
-	});
+	});*/
 };
-exports.getFlights = function (req, res) {
-	var options = {};
-	getData(options, req, res);
+exports.getMeals = function (req, res) {
+	/*var options = {};
+	getData(options, req, res);*/
+	
+
+};
+exports.getMeal = function (req, res) {
+
+	/*var identifier = req.params.id;
+	var options = {}
+	getData(options, req, res);*/
 	
 };
-exports.getFlight = function (req, res) {
-
-	var identifier = req.params.id;
-	var options = {}
-	getData(options, req, res);
-};
-exports.postFlight = function (req, res) {
+exports.postMeal = function (req, res) {
 	res.send('post');
 };
-exports.putFlight = function (req, res) {
+exports.putMeal = function (req, res) {
 	res.send('put');
 };
-exports.deleteFlight = function (req, res) {
+exports.deleteMeals = function (req, res) {
 	res.send('delete');
 };
