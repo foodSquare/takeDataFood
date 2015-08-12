@@ -19,8 +19,8 @@ app.use(function (req, res, next) {
 
 // JSON API
 app.get('/login', function (req, res) {
-  console.log("REQ: ", req, "RES: " ,res);
-  res.send("REQ: ", req, "RES: " ,res);
+  //console.log("REQ: ", req, "RES: " ,res);
+  //res.send("REQ: ", req, "RES: " ,res);
 });
 app.get('/', function (req, res) {
   res.send('');

@@ -75,6 +75,6 @@ exports.postMeal = function (req, res) {
 exports.putMeal = function (req, res) {
 	res.send('put');
 };
-exports.deleteMeals = function (req, res) {
+exports.deleteMeal = function (req, res) {
 	res.send('delete');
 };
